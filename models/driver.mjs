@@ -1,4 +1,5 @@
 import mongoose from 'mongoose';
+import PointSchema from './point.mjs';
 
 const Schema = mongoose.Schema;
 
@@ -11,6 +12,7 @@ const DriverSchema = new Schema({
     type: Boolean,
     default: false,
   },
+  geometry: PointSchema
 });
 
 const Driver = mongoose.model('driver', DriverSchema);

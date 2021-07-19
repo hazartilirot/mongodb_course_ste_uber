@@ -1,6 +1,6 @@
-import assert from 'assert'
-import request from 'supertest'
-import app from '../app.mjs'
+import assert from 'assert';
+import request from 'supertest';
+import app from '../app.mjs';
 
 describe('The express app', () => {
   it('handles a GET request to api/', done => {
@@ -9,6 +9,6 @@ describe('The express app', () => {
       .end((err, res) => {
         assert(res.body.hi === 'there');
         done();
-      })
-  })
-})
+      });
+  });
+});
